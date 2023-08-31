@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: mnpg
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    username: postgres
+    password: pg1234
+    url: jdbc:postgresql://localhost:5432/postgres
+flyway:
+  datasources:
+    default:
+      enabled: true
+      default-schema: mnpg
+jooq:
+  datasources:
+    default:
+      sql-dialect: postgres

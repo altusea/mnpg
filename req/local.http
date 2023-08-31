@@ -1,0 +1,22 @@
+###
+POST http://localhost:8080/operator/add
+Content-Type: application/json
+
+{
+  "id": "42",
+  "name": "abc",
+  "tel": "12341023",
+  "addr": "湖南长沙"
+}
+
+
+###
+GET http://localhost:8080/operator/listAllId
+
+
+###
+DELETE http://localhost:8080/operator/delete?id=003
+
+
+###
+GET http://localhost:8080/operator/listAll
