@@ -5,7 +5,7 @@ plugins {
     id("io.micronaut.aot") version "4.0.2"
 }
 
-group = "io.micronaut"
+group = "org.example"
 version = "1.0"
 
 val javaVersion: Int = 17
@@ -20,12 +20,14 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
 
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.flyway:micronaut-flyway")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.sql:micronaut-jooq")
+    implementation("io.micronaut.validation:micronaut-validation")
     implementation("io.swagger.core.v3:swagger-annotations")
     // added
     implementation("org.jooq:jooq-codegen:3.18.6")
@@ -40,11 +42,12 @@ dependencies {
     runtimeOnly("org.yaml:snakeyaml")
 
     testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.junit.jupiter:junit-jupiter-params")
 }
 
 
 application {
-    mainClass.set("io.micronaut.Application")
+    mainClass.set("org.example.mnpg.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion(javaVersion)

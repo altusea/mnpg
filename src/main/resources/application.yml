@@ -6,7 +6,7 @@ datasources:
     driver-class-name: org.postgresql.Driver
     db-type: postgres
     username: postgres
-    password: pg1234
+    password: whatever
     url: jdbc:postgresql://localhost:5432/postgres
 flyway:
   datasources:
